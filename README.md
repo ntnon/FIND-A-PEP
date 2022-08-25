@@ -2,7 +2,7 @@
 My entry to Stacc's "Know-your-customer" challenge
 Bekriv prosjektet ditt kort.
 
-# Boot
+# Boot project
 1) navigate to the project folder
 2) 'npm run start'
 
