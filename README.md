@@ -3,7 +3,7 @@ My entry to Stacc's "Know-your-customer" challenge
 https://github.com/stacc/stacc-code-challenge-public
 
 
-# Boot
+# Boot project
 1) navigate to the project folder
 2) 'npm run start'
 
