@@ -3,14 +3,6 @@ My entry to Stacc's "Know-your-customer" challenge
 
 https://github.com/stacc/stacc-code-challenge-public
 
-# Front-end
-
-- [X] display fetched json
-- [X] basic css
-- [ ] css grid
-- [ ] make website prettier
-- [ ] animated loading icon
-
 
 # Back-end
 - [X] fetch from Stacc API
@@ -19,6 +11,14 @@ https://github.com/stacc/stacc-code-challenge-public
 - [ ] seperate printer and dataparser
 - [ ] deploy / host
 - [ ] create API functionality
+
+
+# Front-end
+- [X] display fetched json
+- [X] basic css
+- [ ] css grid
+- [ ] make website prettier
+- [ ] animated loading icon
 
 
 # Boot project
