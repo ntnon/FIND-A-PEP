@@ -3,6 +3,10 @@ My entry to Stacc's "Know-your-customer" challenge
 https://github.com/stacc/stacc-code-challenge-public
 
 # TODO
+- [X] fetch from Stacc API
+- [X] parse fetched json
+- [X] display fetched json
+- [X] basic css
 - [ ] animated loading icon
 - [ ] css grid
 - [ ] seperate printer and dataparser
