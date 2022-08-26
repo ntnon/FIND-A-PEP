@@ -9,6 +9,7 @@ v1.0
 - [X] fetch from Stacc API
 - [X] parse fetched json
 - [X] create git repo
+
 v1.1
 - [ ] seperate functions into seperate components
 - [ ] recursive algorithm to unpack 
@@ -19,6 +20,7 @@ v1.1
 v1.0
 - [X] display fetched json
 - [X] basic css
+
 v1.1
 - [ ] css grid
 - [ ] make website prettier
