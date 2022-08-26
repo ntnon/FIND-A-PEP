@@ -42,3 +42,8 @@ code {
 .input {
   padding: 10;
 }
+
+.example {
+  color: rgb(165, 125, 125);
+  font-size: medium;
+}
