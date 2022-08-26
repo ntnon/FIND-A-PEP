@@ -12,9 +12,11 @@ v1.0
 
 v1.1
 - [ ] seperate functions into seperate components
-- [ ] recursive algorithm to unpack fetched objects. Necessary in order to retrieve a company's employees
+- [ ] recursive algorithm to unpack fetched objects. Necessary in order to retrieve a company's 
+employees
 - [ ] deploy / host
 - [ ] create API functionality
+- [ ] proper error handling
 
 # Front-end
 v1.0
