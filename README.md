@@ -3,12 +3,12 @@ My entry to Stacc's "Know-your-customer" challenge
 https://github.com/stacc/stacc-code-challenge-public
 
 # TODO
-- [] animated loading icon
-- [] css grid
-- [] seperate printer and dataparser
-- [] make website pretty
-- [] deploy / host
-- [] create API functionality
+- [ ] animated loading icon
+- [ ] css grid
+- [ ] seperate printer and dataparser
+- [ ] make website pretty
+- [ ] deploy / host
+- [ ] create API functionality
 
 # Boot project
 1) navigate to the project folder
