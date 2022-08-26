@@ -5,16 +5,21 @@ https://github.com/stacc/stacc-code-challenge-public
 
 
 # Back-end
+v1.0
 - [X] fetch from Stacc API
 - [X] parse fetched json
 - [X] create git repo
-- [ ] seperate printer and dataparser
+v1.1
+- [ ] seperate functions into seperate components
+- [ ] recursive algorithm to unpack 
 - [ ] deploy / host
 - [ ] create API functionality
 
 # Front-end
+v1.0
 - [X] display fetched json
 - [X] basic css
+v1.1
 - [ ] css grid
 - [ ] make website prettier
 - [ ] animated loading icon
