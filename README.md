@@ -12,7 +12,6 @@ https://github.com/stacc/stacc-code-challenge-public
 - [ ] deploy / host
 - [ ] create API functionality
 
-
 # Front-end
 - [X] display fetched json
 - [X] basic css
