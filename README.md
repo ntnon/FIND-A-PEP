@@ -1,18 +1,25 @@
 # Know Your Customer
 My entry to Stacc's "Know-your-customer" challenge
+
 https://github.com/stacc/stacc-code-challenge-public
 
-# TODO
-- [X] fetch from Stacc API
-- [X] parse fetched json
+# Front-end
+
 - [X] display fetched json
 - [X] basic css
-- [ ] animated loading icon
 - [ ] css grid
+- [ ] make website prettier
+- [ ] animated loading icon
+
+
+# Back-end
+- [X] fetch from Stacc API
+- [X] parse fetched json
+- [X] create git repo
 - [ ] seperate printer and dataparser
-- [ ] make website pretty
 - [ ] deploy / host
 - [ ] create API functionality
+
 
 # Boot project
 1) navigate to the project folder
