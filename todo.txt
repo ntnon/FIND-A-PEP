@@ -1,0 +1,5 @@
+- add an animated loading screen
+
+- set up css grid
+
+- 
