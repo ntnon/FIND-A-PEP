@@ -1,47 +1,34 @@
-import { useRef } from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import Info from './Info';
-
+import { useRef, useState, useEffect } from 'react';
+import Scheduler from './Scheduler';
+import parseRequestList from './parseRequestList';
 
 function App() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [subject, setSubject] = useState('')
+  const inputRef = useRef(null)
+  const [input, setInput] = useState('')
+  const [results, setResults] = useState('')
 
-  /*
-  Most of the fetch-logic used in the useEffect function is based on this article:
-  https://blog.logrocket.com/modern-api-data-fetching-methods-react/
-  */
 
   useEffect(() => {
-    var url = "https://code-challenge.stacc.dev/api/pep?name=" + subject
-    async function getData() {
-      try {
-        const response = await fetch(url);
-        if (!response.ok) {
-          throw new Error(
-            `This is an HTTP error: The status is ${response.status}`
-          );
-        }
-        let actualData = await response.json();
-        setData(actualData);
-        setError(null);
-      } catch (err) {
-        setError(err.message);
-        setData(null);
-      } finally {
-        setLoading(false);
-      }
-    }
-    if (subject) {
-      getData()
-    }
+    if (input) {
+      const items = Scheduler(input)
+      parseRequestList(items)
+        .then(c => setResults(printVals(c)))
 
-  }, [subject]);
+    }
+  }, [input])
 
-  const inputRef = useRef(null);
+  function printVals(obj) {
+    if (obj) {
+      return <pre>
+        <code>
+          {JSON.stringify(obj, null, 4)}
+        </code>
+      </pre>
+    }
+    else {
+      return <pre>no results</pre>
+    }
+  }
 
   return (
     <div className="interface">
@@ -49,17 +36,20 @@ function App() {
         Welcome,
       </h1>
       <p>to my first API-application</p>
+      <p className="example">example searches: "988971375", "Knut Arild Hareide"</p>
       <input
         ref={inputRef}
         type="text"
       />
       <button
-        onClick={() => setSubject(inputRef.current.value)}>
+        onClick={() => setInput(inputRef.current.value)}>
         Confirm name
       </button>
-      <Info data={data} />
+      <br></br>
+      Showing results for "{input}"
+      {results}
     </div>
-
   )
 }
+
 export default App;
