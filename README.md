@@ -37,6 +37,9 @@ v1.1
 # Comments
 I am new to css-styling, which leaves much to be desired on the front-end aspect of this project.
 
-I had to learn about API fetching in order to complete the task. This went surprisingly well.
+I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
+
+# Flowchart - main idea
+https://drive.google.com/file/d/1gNuj3RCjWzsJgfrgtCJvIXxuEINfyWUE/view?usp=sharing
 
 
