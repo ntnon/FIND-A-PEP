@@ -17,6 +17,8 @@ v2.0
 - [x] created a flowchart to visualize the flow of information between components. Though as of 27.aug 2022, the chart is a bit outdated
 - [x] render asynchronous data
 - [ ] recursive algorithm to unpack fetched objects. Necessary in order to retrieve a company's 
+- [ ] One mode for previewing everything related to a search
+- [ ] one mode for returning every person related to the search; and their PEP status
 employees
 - [ ] deploy / host
 - [ ] create API functionality
@@ -32,6 +34,7 @@ v2.0
 - [ ] css grid
 - [ ] make website prettier
 - [ ] animated loading icon
+- [ ] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction
 
 
 # Boot project
