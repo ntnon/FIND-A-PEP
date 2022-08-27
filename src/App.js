@@ -6,14 +6,23 @@ function App() {
   const inputRef = useRef(null)
   const [input, setInput] = useState('')
   const [results, setResults] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const [searchDecleration, setSearchDecleration] = useState("")
 
 
   useEffect(() => {
     if (input) {
       const items = Scheduler(input)
+      setIsLoading(true)
       parseRequestList(items)
-        .then(c => setResults(printVals(c)))
-
+        .then(c => {
+          setResults(printVals(c))
+          setIsLoading(false)
+        })
+        .catch(() => {
+          setIsLoading(false)
+        })
+      setSearchDecleration("Showing results for: " + JSON.stringify(input))
     }
   }, [input])
 
@@ -30,6 +39,7 @@ function App() {
     }
   }
 
+
   return (
     <div className="interface">
       <h1>
@@ -45,8 +55,8 @@ function App() {
         onClick={() => setInput(inputRef.current.value)}>
         Confirm name
       </button>
+      {isLoading ? (<p>loading...</p>) : <p>{searchDecleration}</p>}
       <br></br>
-      Showing results for "{input}"
       {results}
     </div>
   )
