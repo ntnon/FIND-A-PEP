@@ -4,7 +4,7 @@ My entry to Stacc's "Know-your-customer" challenge
 https://github.com/stacc/stacc-code-challenge-public
 
 
-# Back-end
+# Back-end version log and development
 v1.0
 - [X] fetch from Stacc API
 - [X] parse fetched json
@@ -23,8 +23,9 @@ employees
 - [ ] deploy / host
 - [ ] create API functionality
 - [ ] proper error handling
+- [ ] add a search history - use component from previous project?
 
-# Front-end
+# Front-end version log and development
 v1.0
 - [X] display fetched json
 - [X] basic css
@@ -34,7 +35,7 @@ v2.0
 - [ ] css grid
 - [ ] make website prettier
 - [ ] animated loading icon
-- [ ] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction
+- [ ] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown.
 
 
 # Boot project
