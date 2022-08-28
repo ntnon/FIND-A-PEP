@@ -5,7 +5,11 @@ async function parseRequestList(list) {
     console.log(list)
     for (let i = 0; i < list.length; i++) {
         let item = list[i]
-        const data = await Fetcher(item).then(b => elements.push(b))
+
+        await Fetcher(item).then(b => {
+
+            elements.push(b)
+        })
     }
     return elements
 }
