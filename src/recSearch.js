@@ -1,16 +1,16 @@
 var data,
     targets;
-var results = []
+let results = []
 
 function addToResults(r) {
     results.push(r)
 }
 
-function recSearch(obj, targets) {
+function search(obj, targets) {
     var result = []
     if (obj instanceof Array) {
         for (var i = 0; i < obj.length; i++) {
-            result.push(recSearch(obj[i], targets))
+            result.push(search(obj[i], targets))
         }
     }
     else {
@@ -20,11 +20,16 @@ function recSearch(obj, targets) {
                 return obj[prop]
             }
             if (obj[prop] instanceof Object || obj[prop] instanceof Array) {
-                result = (recSearch(obj[prop], targets))
+                result = (search(obj[prop], targets))
             }
         }
     }
     return results
+
+}
+function recSearch(obj, targets) {
+    results = []
+    return search(obj, targets)
 }
 
 
