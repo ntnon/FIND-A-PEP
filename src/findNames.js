@@ -1,49 +1,20 @@
-const findNames = (props) => {
-    const data = props.data
-    const keywords = ["navn"]
-    var results = []
+import recSearch from "./recSearch"
+/*
+* takes a list of names. Returns only valid names
+* valid name is an object like this {"fornavn":x, "etternavn":y}
+*/
 
-    function addToResults(r) {
-        results.push(r)
-    }
+function findNames(r) {
 
-    async function locateNamesRec(obj) {
-        var result = []
-        if (obj instanceof Array) {
-            for (var i = 0; i < obj.length; i++) {
-                result.push(locateNamesRec(obj[i]))
-            }
+    const listOfNames = recSearch(r, ["navn"])
+    console.log(listOfNames)
+    var t = []
+    for (var e in listOfNames) {
+        if (listOfNames[e].fornavn) {
+            t.push(listOfNames[e].fornavn + " " + listOfNames[e].etternavn)
         }
-        else {
-            for (var prop in obj) {
-                if (keywords.includes(prop)) {
-                    addToResults(obj[prop])
-                    return obj[prop]
-                }
-                if (obj[prop] instanceof Object || obj[prop] instanceof Array) {
-                    result = (locateNamesRec(obj[prop]))
-                }
-            }
-        }
-        return result
     }
-
-    /*
-    * takes a list of names. Returns only valid names
-    * valid name is an object like this {"fornavn":x, "etternavn":y}
-    */
-
-    function collapse(r) {
-        var t = []
-        for (var e in r) {
-            if (r[e].fornavn) {
-                t.push(r[e].fornavn + " " + r[e].etternavn)
-            }
-        }
-        return t
-    }
-    locateNamesRec(data)
-    return collapse(results)
+    return t
 }
 
 export default findNames;
