@@ -2,6 +2,8 @@ import { useRef, useState, useEffect } from 'react';
 import Scheduler from './Scheduler';
 import parseRequestList from './parseRequestList';
 import printVals from './printVals'
+import findNames from './findNames';
+import locateNamesRec from './locateNames';
 
 function App() {
   const inputRef = useRef(null)
@@ -11,24 +13,6 @@ function App() {
   const [searchDecleration, setSearchDecleration] = useState("")
 
   useEffect(() => {
-    if (input) {
-      const items = Scheduler(input) //Create a list of fetch requests
-      setIsLoading(true)
-      parseRequestList(items) //
-        .then(c => {
-          setResults(printVals(c))
-          setIsLoading(false)
-        }
-        ).catch(() => {
-          setIsLoading(false)
-        }
-        )
-      setSearchDecleration("Showing results for: " + JSON.stringify(input))
-    }
-    else {
-      setSearchDecleration("")
-    }
-    setResults("")
 
   }, [input])
 
@@ -39,7 +23,7 @@ function App() {
           Welcome,
         </h1>
         <p>to my first API-application</p>
-        <p className="example">example searches: "988971375", "Knut Arild Hareide"</p>
+        <p className="example">example searches: "981078365", "Angela Merkel"</p>
         <input
           ref={inputRef}
           type="text"
