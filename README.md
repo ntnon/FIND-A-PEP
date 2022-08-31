@@ -16,13 +16,16 @@ v2.0
 - [x] added a scheduler and parseRequestList component to manage a single search yielding multiple API calls
 - [x] created a flowchart to visualize the flow of information between components. Though as of 27.aug 2022, the chart is a bit outdated
 - [x] render asynchronous data
+
+v2.1
+- [X] recursive algorithm to unpack fetched objects. Necessary in order to retrieve names from "Roller" API
 - [ ] LIMIT vague searches : too vague search -> a far too big request! The search: 'a' yielded a response with character count of 45386695
           a)    minimum characters in search
           b)    automatic timeout.
           c)    error handling
           d)    Do not allow searches with fewer characters than 3
           
-- [ ] recursive algorithm to unpack fetched objects. Necessary in order to retrieve names from "Roller" API
+
 - [ ] One mode for previewing everything related to a search
 - [ ] one mode for returning every person related to the search; and their PEP status
 employees
@@ -38,6 +41,9 @@ v1.0
 
 v2.0
 - [x] added an example tag. Very few other things changed, front-end wise in this version.
+
+v2.1
+no front-end updates
 - [ ] css grid
 - [ ] make website prettier
 - [ ] animated loading icon
