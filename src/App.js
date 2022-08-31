@@ -1,9 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
-import Scheduler from './Scheduler';
-import parseRequestList from './parseRequestList';
-import printVals from './printVals'
-import findNames from './findNames';
-import locateNamesRec from './locateNames';
+import getData from './Scheduler';
+
 
 function App() {
   const inputRef = useRef(null)
@@ -11,10 +8,22 @@ function App() {
   const [results, setResults] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [searchDecleration, setSearchDecleration] = useState("")
+  const [tasks, setTasks] = useState(null)
 
   useEffect(() => {
+    const b = "https://code-challenge.stacc.dev/api/roller?orgNr=981078365"
+    try {
+      const schedule = getData("981078365").then(f => console.log(f))
+    }
+    catch (error) {
+      throw Error("Request took too long to process")
+    }
 
-  }, [input])
+
+  }, [input]
+  )
+
+
 
   return (
     <div className="main">
@@ -39,7 +48,6 @@ function App() {
           {results}
         </div>
       </div>
-
     </div>
 
   )
