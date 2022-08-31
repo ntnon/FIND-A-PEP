@@ -19,16 +19,12 @@ v2.0
 
 v2.1
 - [X] recursive algorithm to unpack fetched objects. Necessary in order to retrieve names from "Roller" API
-- [ ] LIMIT vague searches : too vague search -> a far too big request! The search: 'a' yielded a response with character count of 45386695
-          a)    minimum characters in search
-          b)    automatic timeout.
-          c)    error handling
-          d)    Do not allow searches with fewer characters than 3
-          
 
-- [ ] One mode for previewing everything related to a search
-- [ ] one mode for returning every person related to the search; and their PEP status
-employees
+v2.2
+- [X] Requests that takes too long will abort automagically
+- [X] Improved Scheduler, it now retrieves all data related to a search, neatly structured and ready for rendering
+
+- [ ] Create a rendering system that parses values from scheduler
 - [ ] deploy / host
 - [ ] create API functionality
 - [ ] proper error handling
@@ -42,7 +38,7 @@ v1.0
 v2.0
 - [x] added an example tag. Very few other things changed, front-end wise in this version.
 
-v2.1
+v2.1-2.2
 no front-end updates
 - [ ] css grid
 - [ ] make website prettier
