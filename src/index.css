@@ -1,49 +1,128 @@
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  align-self: left;
-  flex-wrap: wrap;
-  position: absolute;
-  padding: 20px 100px;
+  margin: 0;
+  height: 100vh;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
 
-  background-color: rgb(255, 199, 199);
-  font-size: x-large;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-  color: green;
-  font-size: large;
-  font-weight: bold;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.5fr;
+  grid-template-rows: 0.1fr 4fr 4fr;
+  grid-template-areas:
+    "header   header   header"
+    "UI       UI       results"
+    "rawdata  rawdata  results";
+  grid-gap: 0.7rem;
+  height: 100vh;
+  margin: 2em;
+}
+
+
+.header {
+  padding-left: 130px;
+  padding-right: 130px;
+  display: flex;
+  justify-content: space-between;
+  grid-area: header;
+  background: #d6d8f7;
 }
 
 .interface {
-  color: rgb(66, 14, 14);
-  display: table;
-  white-space: pre-wrap;
-  /* css-3 */
-  white-space: -moz-pre-wrap;
-  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;
-  /* Opera 4-6 */
-  white-space: -o-pre-wrap;
-  /* Opera 7 */
-  word-wrap: break-word;
-  /* Internet Explorer 5.5+ */
+  display: grid;
+  grid-area: UI;
+  background: #f7d6ef;
+  grid-template-rows: 4fr 1fr 1fr;
+  grid-template-areas:
+    "text"
+    "input"
+    "button";
 }
 
-.input {
-  padding: 10;
+.information {
+  display: grid;
+
+  padding: 30px;
+  column-gap: 4rem;
+  grid-template-columns: 1fr 0.6fr;
+  grid-template-rows: 0.2fr 1fr;
+  grid-template-areas:
+    "h1     h1"
+    "text   pepbox"
 }
 
-.example {
-  color: rgb(165, 125, 125);
-  font-size: medium;
+h1 {
+  grid-area: h1;
+}
+
+.pepbox {
+  font-size: 16px;
+  color: rgb(56, 56, 56);
+  padding: 20px;
+  margin: auto;
+  grid-area: pepbox;
+  background: rgb(206, 206, 206);
+}
+
+.text {
+  font-size: 20px;
+  justify-content: space-between;
+  text-align: justify;
+  grid-area: text;
+  color: rgb(92, 92, 92)
+}
+
+btn {
+  grid-area: button;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  background: #d6eef7;
+  font-size: large;
+  transition: 1s;
+}
+
+btn:hover {
+  transition: 1s ease-in-out;
+  background: #a4dff5;
+  padding-left: 80px;
+
+}
+
+btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+input {
+  padding-left: 30px;
+  border: none;
+  font-size: large;
+  background: #e0d6f7;
+  transition: 1s;
+
+}
+
+textarea:focus,
+input:focus,
+textarea:hover,
+input:hover {
+  padding-left: 80px;
+  outline: none;
+  transition: 1s ease-in-out;
+  background: #c8b4f5;
+
+
+}
+
+.results {
+  grid-area: results;
+  background: #e6f7d6;
+}
+
+.rawdata {
+  grid-area: rawdata;
+  background: #f7dad6;
 }
