@@ -26,6 +26,7 @@ v2.2
 
 v3.1
 - [X] Create a rendering system that parses values from scheduler
+- [X] Connected front- and back-end!
 - [ ] deploy / host
 - [ ] create API functionality
 - [ ] proper error handling
