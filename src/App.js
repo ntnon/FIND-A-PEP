@@ -45,10 +45,13 @@ function App() {
 
   const renderBlocks = () => {
     let blocks = results.map((search) => (
-      <div className="block">
-        <div className="subject">{search.subject}</div>
-        <div className="pep">{pepCheck(search)}</div>
-      </div>
+      <details className="block">
+        <summary>
+          <div className="subject">{search.subject}</div>
+          <div className="pep">{pepCheck(search)}</div>
+        </summary>
+        {printVals(search.data)}
+      </details>
     ))
     return blocks
   }
@@ -59,7 +62,6 @@ function App() {
         <p><a rel="stylesheet" href="https://github.com/Anton-lr/kys-stacc">GitHub page</a></p>
         <p>My submission to <a rel="stylesheet" href="https://github.com/stacc/stacc-code-challenge-public">Stacc's code challenge</a></p>
         <p>This project utilize <a rel="stylesheet" href="https://code-challenge.stacc.dev/">these APIs</a></p>
-
       </div>
       <div className="interface">
         <div className="information">
@@ -77,7 +79,7 @@ function App() {
         <btn onClick={() => setInput(inputRef.current.value)}>Search</btn>
       </div>
       <div className="rawdata">
-
+        {JSON.stringify(isLoading)}
         {printVals(results)}
       </div>
       <div className="results">

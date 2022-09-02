@@ -2,7 +2,7 @@ import findNames from "./findNames"
 
 const fetchIt = (base, subject, type) => {
     let controller = new AbortController();
-    setTimeout(() => controller.abort(), 10000);
+    setTimeout(() => controller.abort(), 30000);
     let url = base + subject.toString()
     try {
         return fetch(url, { signal: controller.signal })
