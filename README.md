@@ -24,7 +24,8 @@ v2.2
 - [X] Requests that takes too long will abort automagically
 - [X] Improved Scheduler, it now retrieves all data related to a search, neatly structured and ready for rendering
 
-- [ ] Create a rendering system that parses values from scheduler
+v3.1
+- [X] Create a rendering system that parses values from scheduler
 - [ ] deploy / host
 - [ ] create API functionality
 - [ ] proper error handling
@@ -40,10 +41,17 @@ v2.0
 
 v2.1-2.2
 no front-end updates
-- [ ] css grid
-- [ ] make website prettier
-- [ ] animated loading icon
-- [ ] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown.
+
+v3.0
+- [X] css grid for main panels
+- [X] make website prettier
+
+v3.1
+- [X] Connected front- and back-end!
+- [X] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown. - no window for seeing errors.
+- [ ] animated loading icon / loading icon
+
+
 
 
 # Boot project
