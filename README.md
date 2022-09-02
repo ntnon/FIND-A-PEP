@@ -28,7 +28,8 @@ v3.1
 - [X] Create a rendering system that parses values from scheduler
 - [X] Connected front- and back-end!
 - [ ] Remove repeated data in findNames return value
-- [ ] deploy / host
+- [ ] Display organization name and merge data from "enheter" and "roller"
+- [ ] deploy / host website
 - [ ] create API functionality
 - [ ] proper error handling
 - [ ] add a search history - use component from previous project?
