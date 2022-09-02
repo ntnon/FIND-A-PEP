@@ -2,9 +2,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import pepCheck from './pepCheck';
 import printVals from './printVals';
 import getData from './Scheduler';
-import sparql from './sparql';
-
-
 
 function App() {
   const inputRef = useRef(null)
@@ -80,6 +77,7 @@ function App() {
         <btn onClick={() => setInput(inputRef.current.value)}>Search</btn>
       </div>
       <div className="rawdata">
+
         {printVals(results)}
       </div>
       <div className="results">
