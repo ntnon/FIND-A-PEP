@@ -27,6 +27,7 @@ v2.2
 v3.1
 - [X] Create a rendering system that parses values from scheduler
 - [X] Connected front- and back-end!
+- [ ] Remove repeated data in findNames return value
 - [ ] deploy / host
 - [ ] create API functionality
 - [ ] proper error handling
@@ -51,6 +52,7 @@ v3.1
 - [X] Connected front- and back-end!
 - [X] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown. - no window for seeing errors.
 - [ ] animated loading icon / loading icon
+- [ ] Provide alternative searches when a search yields too many results
 
 
 
