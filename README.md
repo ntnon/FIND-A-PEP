@@ -54,6 +54,7 @@ v3.1
 - [X] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown. - no window for seeing errors.
 - [ ] animated loading icon / loading icon
 - [ ] Provide alternative searches when a search yields too many results
+- [ ] insert "example searches: 914242649, Anniken Huitfeldt, Kaptein Sabeltann" 
 
 
 
