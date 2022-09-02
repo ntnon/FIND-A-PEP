@@ -14,7 +14,7 @@ function findNames(r) {
             t.push(listOfNames[e].fornavn + " " + listOfNames[e].etternavn)
         }
     }
-    return t
+    return [...new Set(t)];
 }
 
 export default findNames;
