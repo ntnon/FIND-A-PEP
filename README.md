@@ -55,6 +55,7 @@ v3.1
 - [ ] animated loading icon / loading icon
 - [ ] Provide alternative searches when a search yields too many results
 - [ ] insert "example searches: 914242649, Anniken Huitfeldt, Kaptein Sabeltann" 
+- [ ] color distinction between "PEP" and "not PEP"
 
 
 
