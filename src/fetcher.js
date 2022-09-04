@@ -1,4 +1,6 @@
 import findNames from "./findNames"
+import findSuggestions from "./findSuggestions";
+import pepCheck from "./pepCheck";
 
 const fetchIt = (base, subject, type) => {
     let controller = new AbortController();
@@ -10,7 +12,7 @@ const fetchIt = (base, subject, type) => {
             let a = res.json()
             return a
         }).then(data => {
-            return { "type": type, "subject": subject, "data": data }
+            return { "type": type, "subject": subject, "data": data, "pep": pepCheck(type, data), "suggestions": findSuggestions(type, data) }
         }).catch(error => {
             throw Error(error)
         })

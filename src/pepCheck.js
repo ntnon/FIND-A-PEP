@@ -1,20 +1,24 @@
-function pepCheck(a) {
-    if (a.type != "person") { //gray
-        return "company"
+function pepCheck(type, data) {
+    if (type !== "person") {
+        return false
     }
-    let b = a.data.numberOfHits
-    if (b <= 0) { //green
-        return "not PEP"
+
+    let hits = data.numberOfHits
+
+    if (hits == 0) { //green
+        return false
     }
-    if (b == 1) { //blue
-        return "PEP"
+    if (hits == 1) { //blue
+        return true
     }
-    if (b == 2) {
-        return "PEP"
+    if (hits == 2) {
+        return true
     }
-    if (b > 2) {
-        return "maybe PEP"
+    if (hits > 2) {
+        return false
     }
 }
+
+
 export default pepCheck
 
