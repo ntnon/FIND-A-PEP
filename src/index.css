@@ -31,8 +31,7 @@ body {
   grid-area: UI;
   background: #f7d6ef;
   grid-template-rows: 4fr 1fr 1fr;
-  grid-template-areas:
-    "text"
+  grid-template-areas: "text"
     "input"
     "button";
 }
@@ -45,11 +44,11 @@ body {
   grid-template-rows: 0.2fr 1fr;
   grid-template-areas:
     "h1     h1"
-    "text   pepbox"
+    "text   pepbox";
+
 }
 
 h1 {
-
   grid-area: h1;
   color: rgb(92, 92, 92)
 }
@@ -82,11 +81,11 @@ btn {
   border: none;
   background: #d6eef7;
   font-size: large;
-  transition: 1s;
+  transition: 0.4s;
 }
 
 btn:hover {
-  transition: 1s ease-in-out;
+  transition: 0s ease-in-out;
   background: #a4dff5;
   padding-left: 80px;
 
@@ -124,7 +123,6 @@ pre {
   max-width: 200px;
 }
 
-
 summary {
   grid-area: results;
   max-width: 100%;
@@ -143,8 +141,36 @@ summary {
   padding-top: 30px;
   padding-bottom: 30px;
   grid-area: pep;
+  background-color: #98edf0;
+}
+
+.notPep {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  grid-area: pep;
+  background-color: #9bf098;
+}
+
+.maybePep {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  grid-area: pep;
+  background-color: #f098e4;
+}
+
+.company {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  grid-area: pep;
   background-color: #f098bd;
 }
+
 
 .subject {
   font-size: 22px;
@@ -158,4 +184,17 @@ summary {
 .rawdata {
   grid-area: rawdata;
   background: #f7dad6;
+}
+
+.error {
+  grid-area: results;
+  max-width: 100%;
+  min-height: 70px;
+  background-color: #ee4d4dde;
+  font-size: 20px;
+  justify-content: space-between;
+  text-align: center;
+  grid-area: text;
+  font-weight: bold;
+  color: rgb(8, 8, 8)
 }

@@ -13,12 +13,8 @@ import fetchIt from "./fetcher";
 import findNames from "./findNames";
 
 function getData(subject) {
+
     const data = Scheduler(subject)
-    const timer = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(Error("The request took too long. Perhaps try a more specific search"));
-        }, 1000);
-    });
     return Promise.race([data])
 
 }

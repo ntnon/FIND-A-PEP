@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
+import findNames from './findNames';
 import pepCheck from './pepCheck';
+import pepCheckJSX from './pepCheckJSX';
 import printVals from './printVals';
+import recSearch from './recSearch';
 import getData from './Scheduler';
 
 function App() {
@@ -10,25 +13,25 @@ function App() {
   const [results, setResults] = useState([])
   const [blocks, setBlocks] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
+
     if (input != '') {
+      setError(null)
       setIsLoading(true)
-      const b = "https://code-challenge.stacc.dev/api/roller?orgNr=981078365"
-      try {
-        //sparql().then(f => console.log(JSON.stringify(f)))
-        //914242649
-        const schedule = getData(input)
-          .then(f => {
-            setResults(f)
-            console.log(f)
-            setIsLoading(false)
-          })
-      }
-      catch (error) {
-        setIsLoading(false)
-        throw Error("Request took too long to process")
-      }
+
+      //sparql().then(f => console.log(JSON.stringify(f)))
+      //914242649
+      const schedule = getData(input)
+        .then(f => {
+          setResults(f)
+          setIsLoading(false)
+        }).catch(err => {
+          setError(err)
+          setIsLoading(false)
+          setResults([])
+        })
     }
     else {
       setResults([])
@@ -45,15 +48,33 @@ function App() {
 
   const renderBlocks = () => {
     let blocks = results.map((search) => (
-      <details className="block">
+      <details close>
         <summary>
-          <div className="subject">{search.subject}</div>
-          <div className="pep">{pepCheck(search)}</div>
+          {search.type === "person" && <div className="subject">{search.subject}</div>}
+          {search.type === "enheter" && <div className="subject">{search.data.navn}</div>}
+          {search.type === "roller" && <div className="subject">{search.subject}</div>}
+          {pepCheckJSX(search)}
         </summary>
-        {printVals(search.data)}
+        {search.type === "person"
+          && search.data.numberOfHits > 2
+          && renderSuggestions(search)}
+        {search.type === "enheter" && printVals(search.data)}
+        {search.type === "roller" && printVals(search.data)}
       </details>
     ))
     return blocks
+  }
+
+  function renderSuggestions(a) {
+    const renderedItems = []
+    for (var i = 0; i < a.data.hits.length; i++) {
+      let name = a.data.hits[i].name
+      renderedItems.push(<btn className="suggestion" onClick={() => setInput(name)}>{name}</btn>)
+    }
+
+    return renderedItems
+
+    //<btn className="suggestion" onClick={() => setInput(i.name)}>{i.name}</btn>
   }
 
   return (
@@ -74,15 +95,19 @@ function App() {
             <p>A <i>PEP</i> is a politically Exposed Person.</p>
             <p>Banks are required to process PEPs different from civilians.</p>
           </div>
+          <p className="tips">Tips: "company" and "maybe PEP" can be clicked for more information</p>
+
         </div>
         <input ref={inputRef} placeholder="Name / Organization ID"></input>
         <btn onClick={() => setInput(inputRef.current.value)}>Search</btn>
       </div>
       <div className="rawdata">
+        {error && <div className="error">{error.message}<p>Requests that take longer than 10 seconds are terminated</p></div>}
         {JSON.stringify(isLoading)}
         {printVals(results)}
       </div>
       <div className="results">
+
         {blocks}
       </div>
     </div>

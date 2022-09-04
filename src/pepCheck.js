@@ -9,13 +9,12 @@ function pepCheck(a) {
     if (b == 1) { //blue
         return "PEP"
     }
-    if (b == 1) {
+    if (b == 2) {
         return "PEP"
     }
     if (b > 2) {
         return "maybe PEP"
     }
-
 }
+export default pepCheck
 
-export default pepCheck;
