@@ -82,6 +82,7 @@ btn {
   background: #d6eef7;
   font-size: large;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 btn:hover {
@@ -123,7 +124,7 @@ pre {
   max-width: 200px;
 }
 
-summary {
+.resultOverview {
   grid-area: results;
   max-width: 100%;
   min-height: 70px;
@@ -135,7 +136,7 @@ summary {
 }
 
 
-.pep {
+.pepTrue {
   font-size: 20px;
   text-align: center;
   padding-top: 30px;
@@ -144,7 +145,7 @@ summary {
   background-color: #98edf0;
 }
 
-.notPep {
+.pepFalse {
   font-size: 20px;
   text-align: center;
   padding-top: 30px;
@@ -153,24 +154,20 @@ summary {
   background-color: #9bf098;
 }
 
-.maybePep {
+.suggestions {
+  cursor: pointer;
+  color: rgb(59, 59, 59);
   font-size: 20px;
+  background-color: #98d7f0;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  grid-area: pep;
-  background-color: #f098e4;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.company {
-  font-size: 20px;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  grid-area: pep;
-  background-color: #f098bd;
+.newSearch {
+  cursor: pointer;
+  text-align: left;
 }
-
 
 .subject {
   font-size: 22px;

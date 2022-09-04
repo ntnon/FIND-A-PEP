@@ -1,14 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
-import findNames from './findNames';
-import pepCheck from './pepCheck';
-import pepCheckJSX from './pepCheckJSX';
 import printVals from './printVals';
-import recSearch from './recSearch';
 import getData from './Scheduler';
 
 function App() {
   const inputRef = useRef(null)
-
   const [input, setInput] = useState('')
   const [results, setResults] = useState([])
   const [blocks, setBlocks] = useState('')
@@ -16,14 +11,10 @@ function App() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-
     if (input != '') {
       setError(null)
       setIsLoading(true)
-
-      //sparql().then(f => console.log(JSON.stringify(f)))
-      //914242649
-      const schedule = getData(input)
+      getData(input)
         .then(f => {
           setResults(f)
           setIsLoading(false)
@@ -48,31 +39,34 @@ function App() {
 
   const renderBlocks = () => {
     let blocks = results.map((search) => (
-      <details close>
-        <summary>
+      <div className="block">
+        <div className="resultOverview">
           {search.type === "person" && <div className="subject">{search.subject}</div>}
-          {search.type === "enheter" && <div className="subject">{search.data.navn}</div>}
-          {search.type === "roller" && <div className="subject">{search.subject}</div>}
-          {pepCheckJSX(search)}
-        </summary>
-        {search.type === "person"
+          {search.type !== "person" && <div className="subject">{search.subject} {search.type}</div>}
+          {search.pep && <div className="pepTrue">FOUND-A-PEP</div>}
+          {!search.pep && <div className="pepFalse">NOT-A-PEP</div>}
+        </div>
+        {
+          search.type === "person"
           && search.data.numberOfHits > 2
-          && renderSuggestions(search)}
-        {search.type === "enheter" && printVals(search.data)}
-        {search.type === "roller" && printVals(search.data)}
-      </details>
+          && renderSuggestions(search)
+        }
+      </div>
     ))
     return blocks
   }
 
   function renderSuggestions(a) {
-    const renderedItems = []
+    const suggestions = []
     for (var i = 0; i < a.data.hits.length; i++) {
       let name = a.data.hits[i].name
-      renderedItems.push(<btn className="suggestion" onClick={() => setInput(name)}>{name}</btn>)
+      suggestions.push(<btn className="newSearch" onClick={() => setInput(name)}>{name}</btn>)
     }
-
-    return renderedItems
+    return (
+      <details className="suggestions">
+        <summary >Click to see list of PEPs related to "{a.subject}"</summary>
+        {suggestions}
+      </details>)
 
     //<btn className="suggestion" onClick={() => setInput(i.name)}>{i.name}</btn>
   }
@@ -95,8 +89,6 @@ function App() {
             <p>A <i>PEP</i> is a politically Exposed Person.</p>
             <p>Banks are required to process PEPs different from civilians.</p>
           </div>
-          <p className="tips">Tips: "company" and "maybe PEP" can be clicked for more information</p>
-
         </div>
         <input ref={inputRef} placeholder="Name / Organization ID"></input>
         <btn onClick={() => setInput(inputRef.current.value)}>Search</btn>
@@ -107,7 +99,6 @@ function App() {
         {printVals(results)}
       </div>
       <div className="results">
-
         {blocks}
       </div>
     </div>
