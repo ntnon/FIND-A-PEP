@@ -11,7 +11,8 @@ or use the link: https://anton-lr.github.io/kyc/
 
 
 # How to use
-in the input field, write one of three things
+zoom until there is no blue empty space and
+in the input field, write one of three things<br />
 1) A name 
 E.g "Anniken Huitfeldt" <br />
 This will return the PEP-status of this person <br />
@@ -33,15 +34,19 @@ and a "1)"-type PEP-search for each of the people who hold prominent positions w
 # Comments
 I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
 
-Additionally, this was my first fullstack project and my first ever front-end work. I had to learn CSS, React, GitHub and GitHub pages in order to complete this challenge with next to no prior experience, so I'm glad i started early. 
+Additionally, this was my first fullstack project and my first ever front-end work. I had to learn CSS (css selectors, div structuring, detail/summary tags, animations), React (state hooks, props, async functions and promises, conditional rendering, working with components (though my experience with functional programming reveals in the form of many purely function components)) and GitHub (GitHub pages, SSH keys, the "git-workflow") in order to complete this challenge so I'm glad i started early. 
 
 
-# Improvements ?
-There are CSS tricks to be learned, that I know for sure. For one, my use of conditional rendering in App.js feels excessive. Additionally, the project is hard-coded for desktop browsers, it simply does not look good on mobile. Though it works! For sake of efficiency, given more time, I would use a helper function to create a new result array from clicking on names from the list of suggested people when the app does not find any one specific match. This to circumvent making the additional fetch request that is made for the suggestion - the data of which is already collected. 
+# Improvements?
+There are CSS tricks to be learned, that I know for sure. For one, my use of conditional rendering in App.js feels excessive. Additionally, the project is hard-coded for desktop browsers, it simply does not look good on mobile. Though it works!
+
+Clicking on a suggested name works by passing the name as an input to the Schedule component, requiring an additional fetch call even though the data requested is already collected. Given more time, I would've parsed the already-collected data and fed it back to the User without making an additional fetch request.
+
+I learned, the day before the challenge ended, about rem and em units in css, which would have allowed me to resize the website properly. For now, just zoom until it feels right. 
 
 Because I created a general recursive search algorithm for js objects, it would be fairly possible to add create a filtering method, in case the user only knows a portion about a name and additional information. For example: select only german individuals from the 90 suggested provided by the search "Jens". With one day left of this challenge, my extensive and unskilled front-end design would prove too time consuming to change in order to implement search filtering.
 
-
+The next thing I wanted to learn for this project was the Express library in order to set up API endpoints for my website. A dynamic website like that would've required Haroku (or something similar) which seems easy enough to set up. Making an Express application also seems relatively easy. However, having to bake an express server into the ordeal became altogether too many things to learn with the remaining time of the challenge. 
 
 
 # Chart of the "main idea"
