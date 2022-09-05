@@ -5,7 +5,7 @@ https://github.com/stacc/stacc-code-challenge-public
 
 
 # Booting the project
-clone the project and launch from installation folder using 'npm run start'
+clone the project and launch from installation folder using 'npm install' then 'npm run start'
 
 or use the link: https://anton-lr.github.io/kyc/ 
 
@@ -20,7 +20,8 @@ If the person is a PEP you will see "FOUND-A-PEP". Otherwise: "NOT-A-PEP" <br />
 4) A part of a name <br />
 E.g "Ann" <br />
 This will return a clickable summary of PEPs related to the input <br />
-When presented with suggestions, you can click on one of the suggestions to perform a search on that name. 
+When presented with suggestions, you can click on one of the suggestions to perform a search on that name  <br />
+The use case for this is minimal, because if you wouldn't perform a PEP check on someone whos full name you do not know
 
 6) The norwegian organization ID for a company <br />
 E.g "997093550" <br />
@@ -32,7 +33,15 @@ and a "1)"-type PEP-search for each of the people who hold prominent positions w
 # Comments
 I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
 
-Additionally, this was my first fullstack project, and my first every front-end work. I had to learn CSS, React and GitHub in order to complete this challenge. 
+Additionally, this was my first fullstack project and my first ever front-end work. I had to learn CSS, React, GitHub and GitHub pages in order to complete this challenge with next to no prior experience, so I'm glad i started early. 
+
+
+# Improvements ?
+There are CSS tricks to be learned, that I know for sure. For one, my use of conditional rendering in App.js feels excessive. Additionally, the project is hard-coded for desktop browsers, it simply does not look good on mobile. Though it works! For sake of efficiency, given more time, I would use a helper function to create a new result array from clicking on names from the list of suggested people when the app does not find any one specific match. This to circumvent making the additional fetch request that is made for the suggestion - the data of which is already collected. 
+
+Because I created a general recursive search algorithm for js objects, it would be fairly possible to add create a filtering method, in case the user only knows a portion about a name and additional information. For example: select only german individuals from the 90 suggested provided by the search "Jens". With one day left of this challenge, my extensive and unskilled front-end design would prove too time consuming to change in order to implement search filtering.
+
+
 
 
 # Chart of the "main idea"
