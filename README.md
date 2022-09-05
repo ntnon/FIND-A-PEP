@@ -32,6 +32,8 @@ and a "1)"-type PEP-search for each of the people who hold prominent positions w
 # Comments
 I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
 
+Additionally, this was my first fullstack project, and my first every front-end work. I had to learn CSS, React and GitHub in order to complete this challenge. 
+
 
 # Chart of the "main idea"
 https://drive.google.com/file/d/1gNuj3RCjWzsJgfrgtCJvIXxuEINfyWUE/view?usp=sharing
