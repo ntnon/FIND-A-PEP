@@ -3,34 +3,37 @@ body {
   height: 100vh;
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
-  background-color: #9dc9f1;
+  background-color: #9DCAFF;
+  align-content: center;
+  color: rgb(92, 92, 92);
 
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.6fr;
+  grid-template-columns: 1.2fr 1fr;
   grid-template-rows: 0.1fr 4fr 4fr;
   grid-template-areas:
-    "header   header   header"
-    "UI       UI       results"
-    "rawdata  rawdata  results";
-  grid-gap: 0.7rem;
-  height: 100vh;
-  margin: 2em;
+    "header   header"
+    "UI       results"
+    "rawdata  results";
+  grid-gap: 1rem;
+  height: 110vh;
+  margin: 1em;
 }
 
 .header {
+  color: black;
   display: flex;
   justify-content: space-evenly;
   grid-area: header;
-  background: #f0d898;
+  background-color: #A0ACBD;
 }
 
 .interface {
   display: grid;
   grid-area: UI;
-  background: #f7d6ef;
+  background: #FCB1CB;
   grid-template-rows: 4fr 1fr 1fr;
   grid-template-areas: "text"
     "input"
@@ -51,7 +54,7 @@ body {
 
 h1 {
   grid-area: h1;
-  color: rgb(92, 92, 92)
+
 }
 
 .pepbox {
@@ -60,7 +63,7 @@ h1 {
   padding: 20px;
   margin: auto;
   grid-area: pepbox;
-  background: rgb(206, 206, 206);
+  background: #d8f3ff56;
 }
 
 .text {
@@ -73,14 +76,13 @@ h1 {
 
 btn {
   color: rgb(92, 92, 92);
-  font-weight: bold;
   grid-area: button;
   padding-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: none;
-  background: #d0f1fd;
+  background: #FFEDCB;
   font-size: large;
   transition: 0.4s;
   cursor: pointer;
@@ -88,12 +90,13 @@ btn {
 
 .slowButton:hover {
   transition: 1s ease-in-out;
+
 }
 
 
 btn:hover {
-  transition: 0s ease-in-out;
-  background: #a4dff5;
+  transition: 0.1s ease-in-out;
+  background: #FFEDCB;
   padding-left: 80px;
 
 }
@@ -106,7 +109,7 @@ input {
   padding-left: 30px;
   border: none;
   font-size: large;
-  background: #d5c8f3;
+  background: #E5C18F;
   transition: 1s;
 
 }
@@ -118,15 +121,17 @@ input:hover {
   padding-left: 80px;
   outline: none;
   transition: 1s ease-in-out;
-  background: #c8b4f5;
+  background: #E5C18F;
 }
 
 .results {
+
   grid-area: results;
   background: #9dc8f100;
 }
 
 pre {
+  color: black;
   max-width: 200px;
 }
 
@@ -135,45 +140,48 @@ pre {
   max-width: 100%;
   min-height: 70px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1.4fr;
   grid-template-areas:
     "subject pep";
 }
 
 
 .pepTrue {
+  color: black;
   font-size: 20px;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
   grid-area: pep;
-  background-color: #98edf0;
+  background-color: #FF8C5B;
 }
 
 .pepFalse {
+  color: black;
   font-size: 20px;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
   grid-area: pep;
-  background-color: #9bf098;
+  background-color: #00917D
 }
 
 .suggestions {
   cursor: pointer;
   color: rgb(59, 59, 59);
   font-size: 20px;
-  background-color: #98acf0;
+  background-color: #FFEDCB;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  word-break: break-all;
 }
 
 .newSearch {
   cursor: pointer;
   border: 2px;
   text-align: left;
-  background-color: #d0f1fd;
+  background-color: #FFEDCB;
 }
 
 .subject {
@@ -182,12 +190,12 @@ pre {
   padding-top: 30px;
   padding-bottom: 30px;
   grid-area: subject;
-  background-color: #e198f0;
+  background-color: #E5C18F;
 }
 
 .rawdata {
   grid-area: rawdata;
-  background: #f7dad6;
+  background: #d8f3ff00;
 }
 
 .error {

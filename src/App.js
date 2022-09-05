@@ -12,6 +12,7 @@ function App() {
 
   useEffect(() => {
     if (input != '') {
+      setBlocks('')
       setError(null)
       setIsLoading(true)
       getData(input)
@@ -39,11 +40,25 @@ function App() {
   }, [data])
 
   const renderBlocks = () => {
-    let blocks = data.map((search) => (
+
+    let r = data.filter(i => i["type"] !== "enheter")
+    /*I do not really use "enhter" data for my application
+    * So i remove it at the rendering section. However, it remains under "raw data" 
+    * and who knows, maybe it'll be useful in the future
+    */
+    //981078365
+    var cName = null
+    data.map(i => {
+      if (i["type"] === "enheter") {
+        cName = i.data.navn
+      }
+    }) //To display the name of the company, i find data from "enhter".. A bit clunky.
+
+    let blocks = r.map((search) => (
       <div className="block">
         <div className="resultOverview">
           {search.type === "person" && <div className="subject">{search.subject}</div>}
-          {search.type !== "person" && <div className="subject">{search.subject} {search.type}</div>}
+          {search.type !== "person" && <div className="subject">{cName}</div>}
           {search.pep && <div className="pepTrue">FOUND-A-PEP</div>}
           {!search.pep && <div className="pepFalse">NOT-A-PEP</div>}
         </div>
@@ -56,6 +71,13 @@ function App() {
           search.type === "person"
           && search.data.numberOfHits === 1
           && renderSuggestions(search)
+        }
+        {
+          search.type !== "person" &&
+          <details className="suggestions">
+            <summary >Click to see information</summary>
+            {printVals(search.data)}
+          </details>
         }
       </div>
     ))
@@ -100,13 +122,14 @@ function App() {
         <btn className="slowButton" onClick={() => setInput(inputRef.current.value)}>Search</btn>
       </div>
       <div className="rawdata">
-        {error && <div className="error">{error.message}<p>Requests that take longer than 10 seconds are terminated</p></div>}
+        {error && <div className="error">{error.message}</div>}
         {data.length > 0 ? printVals(data) : <h1 className="information">Data from search displayed here</h1>}
       </div>
       <div className="results">
         {!data.length > 0 && <h1 className="information">Results displayed here</h1>}
-        {blocks}
         {isLoading ? <p className="loader"></p> : ""}
+        {blocks}
+
       </div>
     </div>
   )

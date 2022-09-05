@@ -14,6 +14,7 @@ const fetchIt = (base, subject, type) => {
         }).then(data => {
             return { "type": type, "subject": subject, "data": data, "pep": pepCheck(type, data), "suggestions": findSuggestions(type, data) }
         }).catch(error => {
+            console.error(error)
             throw Error(error)
         })
 
