@@ -13,8 +13,6 @@ function pepCheck(type, data, subject, suggestions) {
         let f = suggestions[i].toLowerCase()
         if (f === n) {
             pep = true
-
-
         }
     }
     return pep
