@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/kyc-stacc/static/css/main.980c2f53.css",
-    "main.js": "/kyc-stacc/static/js/main.a2405875.js",
-    "index.html": "/kyc-stacc/index.html",
-    "main.980c2f53.css.map": "/kyc-stacc/static/css/main.980c2f53.css.map",
-    "main.a2405875.js.map": "/kyc-stacc/static/js/main.a2405875.js.map"
+    "main.css": "/kyc/static/css/main.980c2f53.css",
+    "main.js": "/kyc/static/js/main.8ba65394.js",
+    "index.html": "/kyc/index.html",
+    "main.980c2f53.css.map": "/kyc/static/css/main.980c2f53.css.map",
+    "main.8ba65394.js.map": "/kyc/static/js/main.8ba65394.js.map"
   },
   "entrypoints": [
     "static/css/main.980c2f53.css",
-    "static/js/main.a2405875.js"
+    "static/js/main.8ba65394.js"
   ]
 }

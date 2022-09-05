@@ -5,7 +5,7 @@ import getData from './Scheduler';
 function App() {
   const inputRef = useRef(null)
   const [input, setInput] = useState('')
-  const [results, setResults] = useState([])
+  const [data, setData] = useState([])
   const [blocks, setBlocks] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -16,16 +16,17 @@ function App() {
       setIsLoading(true)
       getData(input)
         .then(f => {
-          setResults(f)
+          setData(f)
           setIsLoading(false)
         }).catch(err => {
           setError(err)
           setIsLoading(false)
-          setResults([])
+          setData([])
         })
     }
     else {
-      setResults([])
+      setError(null)
+      setData([])
       setBlocks('')
     }
 
@@ -35,10 +36,10 @@ function App() {
   useEffect(() => {
     setBlocks(renderBlocks)
     setIsLoading(false)
-  }, [results])
+  }, [data])
 
   const renderBlocks = () => {
-    let blocks = results.map((search) => (
+    let blocks = data.map((search) => (
       <div className="block">
         <div className="resultOverview">
           {search.type === "person" && <div className="subject">{search.subject}</div>}
@@ -49,6 +50,11 @@ function App() {
         {
           search.type === "person"
           && search.data.numberOfHits > 2
+          && renderSuggestions(search)
+        }
+        {
+          search.type === "person"
+          && search.data.numberOfHits === 1
           && renderSuggestions(search)
         }
       </div>
@@ -83,23 +89,24 @@ function App() {
           <h1>SPOT-A-PEP</h1>
           <div className="text">
             <p>This website offers free PEP checks of individuals and all individuals related to any norwegian organization.</p>
-            <p> When doing a company search, this website fetches data from brreg.no and performs a PEP search on the people who have important roles in that company.</p>
+
           </div>
           <div className="pepbox">
-            <p>A <i>PEP</i> is a politically Exposed Person.</p>
+            <p>A <i>PEP</i> is a politically Exposed Person. </p>
             <p>Banks are required to process PEPs different from civilians.</p>
           </div>
         </div>
         <input ref={inputRef} placeholder="Name / Organization ID"></input>
-        <btn onClick={() => setInput(inputRef.current.value)}>Search</btn>
+        <btn className="slowButton" onClick={() => setInput(inputRef.current.value)}>Search</btn>
       </div>
       <div className="rawdata">
         {error && <div className="error">{error.message}<p>Requests that take longer than 10 seconds are terminated</p></div>}
-        {JSON.stringify(isLoading)}
-        {printVals(results)}
+        {data.length > 0 ? printVals(data) : <h1 className="information">Data from search displayed here</h1>}
       </div>
       <div className="results">
+        {!data.length > 0 && <h1 className="information">Results displayed here</h1>}
         {blocks}
+        {isLoading ? <p className="loader"></p> : ""}
       </div>
     </div>
   )
