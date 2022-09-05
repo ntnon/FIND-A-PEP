@@ -55,10 +55,8 @@ v3.1
 - [X] Connected front- and back-end!
 - [X] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown. - no window for seeing errors.
 
-
 v3.2
 - [X] Provide alternative searches when a search yields too many results
-~~- [ ] insert "example searches: 914242649, Anniken Huitfeldt, Kaptein Sabeltann" ~~
 - [X] color distinction between "PEP" and "not PEP"
 - [X] Improved rendering for suggestions and adapted to new datastructure
 
