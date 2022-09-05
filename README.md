@@ -4,26 +4,27 @@ My entry to Stacc's "Know-your-customer" challenge
 https://github.com/stacc/stacc-code-challenge-public
 
 
-# How to access
-go to  https://anton-lr.github.io/kyc/ 
-or
-clone the project and launch from installationfolder using 'npm run start'
+# Booting the project
+clone the project and launch from installation folder using 'npm run start'
+
+or use the link: https://anton-lr.github.io/kyc/ 
 
 
 # How to use
-in the input field write one of three things
-1) A name.
-E.g "Anniken Huitfeldt"
-This will return the PEP-status of this person
-If the person is a PEP you will see "FOUND-A-PEP". Otherwise: "NOT-A-PEP"
+in the input field, write one of three things
+1) A name 
+E.g "Anniken Huitfeldt" <br />
+This will return the PEP-status of this person <br />
+If the person is a PEP you will see "FOUND-A-PEP". Otherwise: "NOT-A-PEP" <br />
 
-4) A part of a name.
-E.g "Ann"
-This will return a list of PEPs related to the input
+4) A part of a name <br />
+E.g "Ann" <br />
+This will return a clickable summary of PEPs related to the input <br />
 
-6) The norwegian organization ID for a company
-E.g "997093550"
-This will return information about the company, its roles, as well as a "1)"-type PEP-search for each of the people who hold prominent positions within the company.
+6) The norwegian organization ID for a company <br />
+E.g "997093550" <br />
+This will return a clickable summary with information about the company <br />
+and a "1)"-type PEP-search for each of the people who hold prominent positions within the company <br />
 
 
 
@@ -31,11 +32,14 @@ This will return information about the company, its roles, as well as a "1)"-typ
 I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
 
 
-# Flowchart - conceptual framework
+
+# Chart of the "main idea"
 https://drive.google.com/file/d/1gNuj3RCjWzsJgfrgtCJvIXxuEINfyWUE/view?usp=sharing
 
 
-# Back-end version log and development
+
+# Version log and development
+## Back-end 
 v1.0
 - [X] fetch from Stacc API
 - [X] parse fetched json
@@ -63,48 +67,40 @@ v3.2
 - [X] Remove repeated data in findNames return value
 - [X] Improved fetched datastructure, it now includes pep status and suggestions
 - [X] deploy / host website. https://anton-lr.github.io/kyc/ 
-- [ ] create API functionality
-- [ ] proper error handling
+- [X] Provide alternative searches when a search yields many results
+
+v3.3
+- [X] better error handling
 
 
-# Front-end version log and development
+
+## Front-end version log and development
 v1.0
 - [X] display fetched json
 - [X] basic css
 
 v2.0
-- [x] added an example tag. Very few other things changed, front-end wise in this version.
+- [x] added an example tag. Very few other things changed, front-end wise, in this version.
 
 v2.1-2.2
 no front-end updates
 
 v3.0
 - [X] css grid for main panels
-- [X] make website prettier
+- [X] made website prettier
 
 v3.1
 - [X] Connected front- and back-end!
-- [X] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown. - no window for seeing errors.
+- [X] created seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown. 
 
 v3.2
-- [X] Provide alternative searches when a search yields too many results
 - [X] color distinction between "PEP" and "not PEP"
 - [X] Improved rendering for suggestions and adapted to new datastructure
 
-
-- [ ] animated loading icon / loading icon
-
-
-
-# Boot project
-1) navigate to the project folder
-2) 'npm run start'
-
-
-# Comments
-I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
-
-# Flowchart - main idea
-https://drive.google.com/file/d/1gNuj3RCjWzsJgfrgtCJvIXxuEINfyWUE/view?usp=sharing
-
-
+v3.3
+- [X] animated loading icon / loading icon
+- [X] improved color pallette
+- [X] filtered out unecessary data in rendering. The data excess data is still viewable from the raw data display, but is not rendered as a pep-block
+- [X] clickable summary for companies -> click to reveal information about company. 
+- [X] under results, companies are now rendered as blocks containing the name of the company
+- [X] General restructuring and finishing touches on the sizes of the 
