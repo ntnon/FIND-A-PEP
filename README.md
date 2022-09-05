@@ -27,12 +27,14 @@ v2.2
 v3.1
 - [X] Create a rendering system that parses values from scheduler
 - [X] Connected front- and back-end!
-- [ ] Remove repeated data in findNames return value
-- [ ] Display organization name and merge data from "enheter" and "roller"
-- [ ] deploy / host website
+
+v3.2
+- [X] Remove repeated data in findNames return value
+- [X] Improved fetched datastructure, it now includes pep status and suggestions
+- [X] deploy / host website. https://anton-lr.github.io/kyc/ 
 - [ ] create API functionality
 - [ ] proper error handling
-- [ ] add a search history - use component from previous project?
+
 
 # Front-end version log and development
 v1.0
@@ -52,11 +54,16 @@ v3.0
 v3.1
 - [X] Connected front- and back-end!
 - [X] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown. - no window for seeing errors.
-- [ ] animated loading icon / loading icon
-- [ ] Provide alternative searches when a search yields too many results
-- [ ] insert "example searches: 914242649, Anniken Huitfeldt, Kaptein Sabeltann" 
-- [ ] color distinction between "PEP" and "not PEP"
 
+
+v3.2
+- [X] Provide alternative searches when a search yields too many results
+~~- [ ] insert "example searches: 914242649, Anniken Huitfeldt, Kaptein Sabeltann" ~~
+- [X] color distinction between "PEP" and "not PEP"
+- [X] Improved rendering for suggestions and adapted to new datastructure
+
+
+- [ ] animated loading icon / loading icon
 
 
 
@@ -66,8 +73,6 @@ v3.1
 
 
 # Comments
-I am new to css-styling, which leaves much to be desired on the front-end aspect of this project.
-
 I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
 
 # Flowchart - main idea
