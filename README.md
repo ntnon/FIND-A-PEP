@@ -4,12 +4,10 @@ My entry to Stacc's "Know-your-customer" challenge
 https://github.com/stacc/stacc-code-challenge-public
 
 
-# How to access
-go to  https://anton-lr.github.io/kyc/ 
-
-or
-
+# Booting the project
 clone the project and launch from installation folder using 'npm run start'
+
+or use the link: https://anton-lr.github.io/kyc/ 
 
 
 # How to use
@@ -66,8 +64,10 @@ v3.2
 - [X] Remove repeated data in findNames return value
 - [X] Improved fetched datastructure, it now includes pep status and suggestions
 - [X] deploy / host website. https://anton-lr.github.io/kyc/ 
-- [ ] create API functionality
-- [ ] proper error handling
+
+v3.3
+- [X] better error handling
+
 
 
 # Front-end version log and development
@@ -94,14 +94,14 @@ v3.2
 - [X] color distinction between "PEP" and "not PEP"
 - [X] Improved rendering for suggestions and adapted to new datastructure
 
+v3.3
+- [X] animated loading icon / loading icon
+- [X] improved color pallette
+- [X] filtered out unecessary data in rendering. The data excess data is still viewable from the raw data display, but is not rendered as a pep-block
+- [X] clickable summary for companies -> click to reveal information about company. 
+- [X] under results, companies are now rendered as blocks containing the name of the company
+- [X] General restructuring and finishing touches on the sizes of the 
 
-- [ ] animated loading icon / loading icon
-
-
-
-# Boot project
-1) navigate to the project folder
-2) 'npm run start'
 
 
 # Comments
@@ -109,5 +109,3 @@ I had to learn about API fetching in order to complete the task. ~~This went sur
 
 # Flowchart - main idea
 https://drive.google.com/file/d/1gNuj3RCjWzsJgfrgtCJvIXxuEINfyWUE/view?usp=sharing
-
-
