@@ -34,7 +34,7 @@ and a "1)"-type PEP-search for each of the people who hold prominent positions w
 # Comments
 I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
 
-Additionally, this was my first fullstack project and my first ever front-end work. I had to learn CSS (css selectors, div structuring, detail/summary tags, animations), React (state hooks, props, async functions and promises, conditional rendering, working with components (though my experience with functional programming reveals in the form of many purely function components)) and GitHub (GitHub pages, SSH keys, the "git-workflow") in order to complete this challenge so I'm glad i started early. 
+Additionally, this was my first fullstack project and my first ever front-end work. I had to learn CSS (css selectors, div structuring, detail/summary tags, animations), React (state hooks, props, async functions and promises, conditional rendering, working with components (though my experience with functional programming reveals in the form of many purely function components)) and GitHub (GitHub pages, GitHub Desktop, the "git-workflow") in order to complete this challenge so I'm glad i started early. 
 
 
 # Improvements?
