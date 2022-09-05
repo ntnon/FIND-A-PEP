@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  max-width: 1600px;
   height: 100vh;
   font-size: 15px;
   font-family: "Open Sans", sans-serif;
@@ -35,7 +36,8 @@ body {
   grid-area: UI;
   background: #FCB1CB;
   grid-template-rows: 4fr 1fr 1fr;
-  grid-template-areas: "text"
+  grid-template-areas:
+    "text"
     "input"
     "button";
 }

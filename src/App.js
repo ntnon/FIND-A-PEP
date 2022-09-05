@@ -73,6 +73,13 @@ function App() {
             {printVals(search.data)}
           </details>
         }
+        {
+          search.pep &&
+          <details className="suggestions">
+            <summary >Click to see more information</summary>
+            {printVals(search.data)}
+          </details>
+        }
       </div>
     ))
     return blocks
