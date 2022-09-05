@@ -32,11 +32,14 @@ and a "1)"-type PEP-search for each of the people who hold prominent positions w
 I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
 
 
+
 # Chart of the "main idea"
 https://drive.google.com/file/d/1gNuj3RCjWzsJgfrgtCJvIXxuEINfyWUE/view?usp=sharing
 
 
-# Back-end version log and development
+
+# Version log and development
+## Back-end 
 v1.0
 - [X] fetch from Stacc API
 - [X] parse fetched json
@@ -64,33 +67,33 @@ v3.2
 - [X] Remove repeated data in findNames return value
 - [X] Improved fetched datastructure, it now includes pep status and suggestions
 - [X] deploy / host website. https://anton-lr.github.io/kyc/ 
+- [X] Provide alternative searches when a search yields many results
 
 v3.3
 - [X] better error handling
 
 
 
-# Front-end version log and development
+## Front-end version log and development
 v1.0
 - [X] display fetched json
 - [X] basic css
 
 v2.0
-- [x] added an example tag. Very few other things changed, front-end wise in this version.
+- [x] added an example tag. Very few other things changed, front-end wise, in this version.
 
 v2.1-2.2
 no front-end updates
 
 v3.0
 - [X] css grid for main panels
-- [X] make website prettier
+- [X] made website prettier
 
 v3.1
 - [X] Connected front- and back-end!
-- [X] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown. - no window for seeing errors.
+- [X] created seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown. 
 
 v3.2
-- [X] Provide alternative searches when a search yields too many results
 - [X] color distinction between "PEP" and "not PEP"
 - [X] Improved rendering for suggestions and adapted to new datastructure
 
@@ -101,11 +104,3 @@ v3.3
 - [X] clickable summary for companies -> click to reveal information about company. 
 - [X] under results, companies are now rendered as blocks containing the name of the company
 - [X] General restructuring and finishing touches on the sizes of the 
-
-
-
-# Comments
-I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
-
-# Flowchart - main idea
-https://drive.google.com/file/d/1gNuj3RCjWzsJgfrgtCJvIXxuEINfyWUE/view?usp=sharing
