@@ -11,20 +11,20 @@ or use the link: https://anton-lr.github.io/kyc/
 
 
 # How to use
-in the input field write one of three things
-1) A name.
-E.g "Anniken Huitfeldt"
-This will return the PEP-status of this person
-If the person is a PEP you will see "FOUND-A-PEP". Otherwise: "NOT-A-PEP"
+in the input field, write one of three things
+1) A name 
+E.g "Anniken Huitfeldt" <br />
+This will return the PEP-status of this person <br />
+If the person is a PEP you will see "FOUND-A-PEP". Otherwise: "NOT-A-PEP" <br />
 
-4) A part of a name.
-E.g "Ann"
-This will return a clickable summary of PEPs related to the input
+4) A part of a name <br />
+E.g "Ann" <br />
+This will return a clickable summary of PEPs related to the input <br />
 
-6) The norwegian organization ID for a company
-E.g "997093550"
-This will return a clickable summary with information about the company
-and a "1)"-type PEP-search for each of the people who hold prominent positions within the company
+6) The norwegian organization ID for a company <br />
+E.g "997093550" <br />
+This will return a clickable summary with information about the company <br />
+and a "1)"-type PEP-search for each of the people who hold prominent positions within the company <br />
 
 
 
@@ -32,7 +32,7 @@ and a "1)"-type PEP-search for each of the people who hold prominent positions w
 I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
 
 
-# Flowchart - conceptual framework
+# Chart of the "main idea"
 https://drive.google.com/file/d/1gNuj3RCjWzsJgfrgtCJvIXxuEINfyWUE/view?usp=sharing
 
 
