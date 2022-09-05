@@ -4,9 +4,8 @@ import pepCheck from "./pepCheck";
 
 const fetchIt = (base, subject, type) => {
     let controller = new AbortController();
-    setTimeout(() => controller.abort(), 20000);
+    setTimeout(() => controller.abort(), 30000);
     let url = base + subject.toString()
-
     return fetch(url, { signal: controller.signal })
         .then(res => {
             let a = res.json()
