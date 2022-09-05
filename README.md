@@ -4,6 +4,37 @@ My entry to Stacc's "Know-your-customer" challenge
 https://github.com/stacc/stacc-code-challenge-public
 
 
+# How to access
+go to  https://anton-lr.github.io/kyc/ 
+or
+clone the project and launch from installationfolder using 'npm run start'
+
+
+# How to use
+in the input field write one of three things
+1) A name.
+E.g "Anniken Huitfeldt"
+This will return the PEP-status of this person
+If the person is a PEP you will see "FOUND-A-PEP". Otherwise: "NOT-A-PEP"
+
+4) A part of a name.
+E.g "Ann"
+This will return a list of PEPs related to the input
+
+6) The norwegian organization ID for a company
+E.g "997093550"
+This will return information about the company, its roles, as well as a "1)"-type PEP-search for each of the people who hold prominent positions within the company.
+
+
+
+# Comments
+I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
+
+
+# Flowchart - conceptual framework
+https://drive.google.com/file/d/1gNuj3RCjWzsJgfrgtCJvIXxuEINfyWUE/view?usp=sharing
+
+
 # Back-end version log and development
 v1.0
 - [X] fetch from Stacc API
@@ -27,12 +58,14 @@ v2.2
 v3.1
 - [X] Create a rendering system that parses values from scheduler
 - [X] Connected front- and back-end!
-- [ ] Remove repeated data in findNames return value
-- [ ] Display organization name and merge data from "enheter" and "roller"
-- [ ] deploy / host website
+
+v3.2
+- [X] Remove repeated data in findNames return value
+- [X] Improved fetched datastructure, it now includes pep status and suggestions
+- [X] deploy / host website. https://anton-lr.github.io/kyc/ 
 - [ ] create API functionality
 - [ ] proper error handling
-- [ ] add a search history - use component from previous project?
+
 
 # Front-end version log and development
 v1.0
@@ -52,11 +85,14 @@ v3.0
 v3.1
 - [X] Connected front- and back-end!
 - [X] create seperate panels: one for viewing raw data, one for previewing the data in a slightly more structured manner, and one for user interaction. And one for viewing errors thrown. - no window for seeing errors.
-- [ ] animated loading icon / loading icon
-- [ ] Provide alternative searches when a search yields too many results
-- [ ] insert "example searches: 914242649, Anniken Huitfeldt, Kaptein Sabeltann" 
-- [ ] color distinction between "PEP" and "not PEP"
 
+v3.2
+- [X] Provide alternative searches when a search yields too many results
+- [X] color distinction between "PEP" and "not PEP"
+- [X] Improved rendering for suggestions and adapted to new datastructure
+
+
+- [ ] animated loading icon / loading icon
 
 
 
@@ -66,8 +102,6 @@ v3.1
 
 
 # Comments
-I am new to css-styling, which leaves much to be desired on the front-end aspect of this project.
-
 I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
 
 # Flowchart - main idea
