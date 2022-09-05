@@ -20,6 +20,7 @@ If the person is a PEP you will see "FOUND-A-PEP". Otherwise: "NOT-A-PEP" <br />
 4) A part of a name <br />
 E.g "Ann" <br />
 This will return a clickable summary of PEPs related to the input <br />
+When presented with suggestions, you can click on one of the suggestions to perform a search on that name. 
 
 6) The norwegian organization ID for a company <br />
 E.g "997093550" <br />
@@ -30,7 +31,6 @@ and a "1)"-type PEP-search for each of the people who hold prominent positions w
 
 # Comments
 I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
-
 
 
 # Chart of the "main idea"
@@ -72,6 +72,8 @@ v3.2
 v3.3
 - [X] better error handling
 
+v3.4
+- [X] improved accuracy of pepCheck function. Before this patch, any search which yielded only one or two hits was considered a pep. Now, something is a pep, only if the exact search exists somewhere within the hits array.
 
 
 ## Front-end version log and development
@@ -104,3 +106,6 @@ v3.3
 - [X] clickable summary for companies -> click to reveal information about company. 
 - [X] under results, companies are now rendered as blocks containing the name of the company
 - [X] General restructuring and finishing touches on the sizes of the 
+
+v3.4
+- [X] Block rendering provides clickable summaries for any search that yields 1 or more hits. Updated to work with pepCheck
