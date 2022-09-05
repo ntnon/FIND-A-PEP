@@ -20,6 +20,7 @@ If the person is a PEP you will see "FOUND-A-PEP". Otherwise: "NOT-A-PEP" <br />
 4) A part of a name <br />
 E.g "Ann" <br />
 This will return a clickable summary of PEPs related to the input <br />
+When presented with suggestions, you can click on one of the suggestions to perform a search on that name. 
 
 6) The norwegian organization ID for a company <br />
 E.g "997093550" <br />
