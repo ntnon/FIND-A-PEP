@@ -6,8 +6,10 @@ https://github.com/stacc/stacc-code-challenge-public
 
 # How to access
 go to  https://anton-lr.github.io/kyc/ 
+
 or
-clone the project and launch from installationfolder using 'npm run start'
+
+clone the project and launch from installation folder using 'npm run start'
 
 
 # How to use
@@ -19,11 +21,12 @@ If the person is a PEP you will see "FOUND-A-PEP". Otherwise: "NOT-A-PEP"
 
 4) A part of a name.
 E.g "Ann"
-This will return a list of PEPs related to the input
+This will return a clickable summary of PEPs related to the input
 
 6) The norwegian organization ID for a company
 E.g "997093550"
-This will return information about the company, its roles, as well as a "1)"-type PEP-search for each of the people who hold prominent positions within the company.
+This will return a clickable summary with information about the company
+and a "1)"-type PEP-search for each of the people who hold prominent positions within the company
 
 
 
