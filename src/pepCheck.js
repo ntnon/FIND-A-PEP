@@ -3,7 +3,7 @@ function pepCheck(type, data, subject, suggestions) {
     if (type !== "person") {
         return pep
     }
-    console.log(suggestions)
+
     if (suggestions.length === 0) {
         return pep
     }

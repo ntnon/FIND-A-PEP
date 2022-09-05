@@ -44,11 +44,11 @@ body {
   display: grid;
   padding: 30px;
   column-gap: 4rem;
-  grid-template-columns: 1fr 0.9fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 0.2fr 1fr;
   grid-template-areas:
-    "h1     h1"
-    "text   pepbox";
+    "h1 "
+    "text ";
 
 }
 
@@ -60,14 +60,14 @@ h1 {
 .pepbox {
   font-size: 16px;
   color: rgb(56, 56, 56);
-  padding: 20px;
-  margin: auto;
+  padding: 9px;
   grid-area: pepbox;
   background: #d8f3ff56;
 }
 
 .text {
   font-size: 20px;
+  margin: auto;
   justify-content: space-between;
   text-align: justify;
   grid-area: text;

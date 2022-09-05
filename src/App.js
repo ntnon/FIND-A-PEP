@@ -30,7 +30,6 @@ function App() {
       setData([])
       setBlocks('')
     }
-
   }, [input]
   )
 
@@ -40,7 +39,6 @@ function App() {
   }, [data])
 
   const renderBlocks = () => {
-
     let r = data.filter(i => i["type"] !== "enheter")
     /*I do not really use "enhter" data for my application
     * So i remove it at the rendering section. However, it remains under "raw data" 
@@ -87,12 +85,13 @@ function App() {
       suggestions.push(<btn className="newSearch" onClick={() => setInput(name)}>{name}</btn>)
     }
     return (
-      <details className="suggestions">
-        <summary >{msg}</summary>
-        {suggestions}
-      </details>)
-
-    //<btn className="suggestion" onClick={() => setInput(i.name)}>{i.name}</btn>
+      <div>
+        <details className="suggestions">
+          <summary >{msg}</summary>
+          {suggestions}
+        </details>
+        <p></p>
+      </div>)
   }
 
   return (
@@ -106,12 +105,13 @@ function App() {
         <div className="information">
           <h1>SPOT-A-PEP</h1>
           <div className="text">
-            <p>This website offers free PEP checks of individuals and all individuals related to any norwegian organization.</p>
+            <p>A <i>PEP</i> is a politically Exposed Person.
+              Banks are required to process PEPs different from civilians.</p>
+            <p>This website offers free PEP checks of individuals and all individuals related to norwegian organizations.</p>
 
-          </div>
-          <div className="pepbox">
-            <p>A <i>PEP</i> is a politically Exposed Person. </p>
-            <p>Banks are required to process PEPs different from civilians.</p>
+            <p>Example searches: "Anniken Huitfeldt", "Jens", "998912911"</p>
+            <h5>If a search takes too long, it will automatically abort</h5>
+
           </div>
         </div>
         <input ref={inputRef} placeholder="Name / Organization ID"></input>
@@ -127,7 +127,7 @@ function App() {
         {blocks}
 
       </div>
-    </div>
+    </div >
   )
 }
 

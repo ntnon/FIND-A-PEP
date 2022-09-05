@@ -16,6 +16,9 @@ const fetchIt = (base, subject, type) => {
             return { "type": type, "subject": subject, "data": data, "pep": pepCheck(type, data, subject, suggestions), "suggestions": suggestions }
         }).catch(error => {
             console.error(error)
+            if (error === "TypeError") {
+                console.log("502")
+            }
             throw Error(error)
         })
 
