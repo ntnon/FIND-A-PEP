@@ -4,6 +4,37 @@ My entry to Stacc's "Know-your-customer" challenge
 https://github.com/stacc/stacc-code-challenge-public
 
 
+# How to access
+go to  https://anton-lr.github.io/kyc/ 
+or
+clone the project and launch from installationfolder using 'npm run start'
+
+
+# How to use
+in the input field write one of three things
+1) A name.
+E.g "Anniken Huitfeldt"
+This will return the PEP-status of this person
+If the person is a PEP you will see "FOUND-A-PEP". Otherwise: "NOT-A-PEP"
+
+4) A part of a name.
+E.g "Ann"
+This will return a list of PEPs related to the input
+
+6) The norwegian organization ID for a company
+E.g "997093550"
+This will return information about the company, its roles, as well as a "1)"-type PEP-search for each of the people who hold prominent positions within the company.
+
+
+
+# Comments
+I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
+
+
+# Flowchart - conceptual framework
+https://drive.google.com/file/d/1gNuj3RCjWzsJgfrgtCJvIXxuEINfyWUE/view?usp=sharing
+
+
 # Back-end version log and development
 v1.0
 - [X] fetch from Stacc API
