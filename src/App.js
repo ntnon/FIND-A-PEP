@@ -65,12 +65,13 @@ function App() {
         {
           search.type === "person"
           && search.data.numberOfHits > 2
-          && renderSuggestions(search)
+          && renderSuggestions(search, "Click to see suggestions (" + search.suggestions.length + ")")
         }
         {
           search.type === "person"
           && search.data.numberOfHits === 1
-          && renderSuggestions(search)
+          && search.subject.toLowerCase() !== search.suggestions[0].toLowerCase()
+          && renderSuggestions(search, "Click to see PEP")
         }
         {
           search.type !== "person" &&
@@ -84,7 +85,7 @@ function App() {
     return blocks
   }
 
-  function renderSuggestions(a) {
+  function renderSuggestions(a, msg) {
     const suggestions = []
     for (var i = 0; i < a.data.hits.length; i++) {
       let name = a.data.hits[i].name
@@ -92,12 +93,13 @@ function App() {
     }
     return (
       <details className="suggestions">
-        <summary >Click to see list of PEPs related to "{a.subject}"</summary>
+        <summary >{msg}</summary>
         {suggestions}
       </details>)
 
     //<btn className="suggestion" onClick={() => setInput(i.name)}>{i.name}</btn>
   }
+  console.log("anniken" == "Anniken")
 
   return (
     <div className="grid-container">
