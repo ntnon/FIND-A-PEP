@@ -12,7 +12,8 @@ const fetchIt = (base, subject, type) => {
             let a = res.json()
             return a
         }).then(data => {
-            return { "type": type, "subject": subject, "data": data, "pep": pepCheck(type, data), "suggestions": findSuggestions(type, data) }
+            let suggestions = findSuggestions(type, data)
+            return { "type": type, "subject": subject, "data": data, "pep": pepCheck(type, data, subject, suggestions), "suggestions": suggestions }
         }).catch(error => {
             console.error(error)
             throw Error(error)

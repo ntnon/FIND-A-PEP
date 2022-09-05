@@ -64,14 +64,9 @@ function App() {
         </div>
         {
           search.type === "person"
-          && search.data.numberOfHits > 2
+          && !search.pep
+          && search.suggestions != 0
           && renderSuggestions(search, "Click to see suggestions (" + search.suggestions.length + ")")
-        }
-        {
-          search.type === "person"
-          && search.data.numberOfHits === 1
-          && search.subject.toLowerCase() !== search.suggestions[0].toLowerCase()
-          && renderSuggestions(search, "Click to see PEP")
         }
         {
           search.type !== "person" &&
@@ -99,7 +94,6 @@ function App() {
 
     //<btn className="suggestion" onClick={() => setInput(i.name)}>{i.name}</btn>
   }
-  console.log("anniken" == "Anniken")
 
   return (
     <div className="grid-container">

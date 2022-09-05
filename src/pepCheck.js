@@ -1,24 +1,24 @@
-function pepCheck(type, data) {
+function pepCheck(type, data, subject, suggestions) {
+    var pep = false;
     if (type !== "person") {
-        return false
+        return pep
+    }
+    console.log(suggestions)
+    if (suggestions.length === 0) {
+        return pep
     }
 
-    let hits = data.numberOfHits
+    const n = subject.toLowerCase()
+    for (var i = 0; i < suggestions.length; i++) {
+        let f = suggestions[i].toLowerCase()
+        if (f === n) {
+            pep = true
 
-    if (hits == 0) { //green
-        return false
+
+        }
     }
-    if (hits == 1) { //blue
-        return true
-    }
-    if (hits == 2) {
-        return true
-    }
-    if (hits > 2) {
-        return false
-    }
+    return pep
 }
-
 
 export default pepCheck
 
