@@ -34,7 +34,7 @@ and a "1)"-type PEP-search for each of the people who hold prominent positions w
 # Comments
 I had to learn about API fetching in order to complete the task. ~~This went surprisingly well~~. Working with Asynchronous data was challenging. 
 
-Additionally, this was my first fullstack project and my first ever front-end work. I had to learn CSS (css selectors, div structuring, detail/summary tags, animations), React (state hooks, props, async functions and promises, conditional rendering, working with components (though my experience with functional programming reveals in the form of many purely function components)) and GitHub (GitHub pages, GitHub Desktop, the "git-workflow") in order to complete this challenge so I'm glad i started early. 
+Additionally, this was my first fullstack project and my first ever front-end work. I had to learn CSS (css selectors, div structuring, detail/summary tags, animations), React (state hooks, props, async functions and promises, map, conditional rendering, working with components (though my experience with functional programming reveals in the form of many purely function components)) and GitHub (GitHub pages, GitHub Desktop, the "git-workflow") in order to complete this challenge so I'm glad i started early. 
 
 
 # Improvements?
@@ -47,6 +47,8 @@ I learned, the day before the challenge ended, about rem and em units in css, wh
 Because I created a general recursive search algorithm for js objects, it would be fairly possible to add create a filtering method, in case the user only knows a portion about a name and additional information. For example: select only german individuals from the 90 suggested provided by the search "Jens". With one day left of this challenge, my extensive and unskilled front-end design would prove too time consuming to change in order to implement search filtering.
 
 The next thing I wanted to learn for this project was the Express library in order to set up API endpoints for my website. A dynamic website like that would've required Haroku (or something similar) which seems easy enough to set up. Making an Express application also seems relatively easy. However, having to bake an express server into the ordeal became altogether too many things to learn with the remaining time of the challenge. 
+
+I wrote alot of code for this project and I do not have the patience to comment exhaustively on all of it - though I'll say this. The most difficult thing was working in a way that feels "react-y". React proposes certain design patterns and is very powerful when you work alongside with it, which I eventually got the hang of, but the code reveals scars from a battle between one man and the entire react workflow.
 
 
 # Chart of the "main idea"
@@ -90,6 +92,7 @@ v3.3
 
 v3.4
 - [X] improved accuracy of pepCheck function. Before this patch, any search which yielded only one or two hits was considered a pep. Now, something is a pep, only if the exact search exists somewhere within the hits array.
+- [X] various bug fixes and minor tweaks
 
 
 ## Front-end version log and development
@@ -125,3 +128,4 @@ v3.3
 
 v3.4
 - [X] Block rendering provides clickable summaries for any search that yields 1 or more hits. Updated to work with pepCheck
+- [X] various bug fixes and minor tweaks
