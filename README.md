@@ -39,6 +39,7 @@ Additionally, this was my first fullstack project and my first ever front-end wo
 
 # Improvements?
 There are CSS tricks to be learned, that I know for sure. For one, my use of conditional rendering in App.js feels excessive. Additionally, the project is hard-coded for desktop browsers, it simply does not look good on mobile. Though it works! I learned about WCAG on the deadline day. Wish I knew about this earlier.
+things to check out: https://tailwindcss.com/
 
 Clicking on a suggested name works by passing the name as an input to the Schedule component, requiring an additional fetch call even though the data requested is already collected. Given more time, I would've parsed the already-collected data and fed it back to the User without making an additional fetch request.
 
