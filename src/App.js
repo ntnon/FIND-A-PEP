@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 import printVals from './printVals';
 import getData from './Scheduler';
+import fetchNews from './fetchNews';
+import printNews from './printNews';
 
 function App() {
   const inputRef = useRef(null)
@@ -9,12 +11,26 @@ function App() {
   const [blocks, setBlocks] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
+  const [subject, setSubject] = useState("")
+  const [news, setNews] = useState(null)
 
   useEffect(() => {
+
     if (input != '') {
+      console.log(input)
+      fetchNews(input)
+        .then(d => {
+          const b = []
+          d.articles.map(i => {
+            b.push({ "title": i.title, "url": i.url })
+          })
+          setNews(b)
+
+        })
       setBlocks('')
       setError(null)
       setIsLoading(true)
+      fetchNews(input)
       getData(input)
         .then(f => {
           setData(f)
@@ -37,6 +53,11 @@ function App() {
     setBlocks(renderBlocks)
     setIsLoading(false)
   }, [data])
+
+  useEffect(() => { //seperated from useEffect based on input, because if the input is a company, I want to set subject to company name, not its ID
+
+  }, [subject])
+
 
   const renderBlocks = () => {
     let r = data.filter(i => i["type"] !== "enheter")
@@ -75,14 +96,22 @@ function App() {
         }
         {
           search.pep &&
-          <details className="suggestions">
-            <summary >Click to see more information</summary>
-            {printVals(search.data)}
+          <details className="articles">
+            <summary >Click to see relevant articles</summary>
+            {renderNews(news)}
           </details>
         }
       </div>
     ))
     return blocks
+  }
+
+  function renderNews() {
+    const n = []
+    for (var i = 0; i < news.length; i++) {
+      n.push(<div>Article: <a href={news[i].url}>{news[i].title}</a><br></br></div>)
+    }
+    return n
   }
 
   function renderSuggestions(a, msg) {
@@ -126,6 +155,7 @@ function App() {
       </div>
       <div className="rawdata">
         {error && <div className="error">{error.message}</div>}
+        {news && printVals(news)}
         {data.length > 0 ? printVals(data) : <h1 className="information">Data from search displayed here</h1>}
       </div>
       <div className="results">
