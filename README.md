@@ -96,6 +96,10 @@ v3.4
 - [X] various bug fixes and minor tweaks
 
 
+v4
+- [X] Added NewsAPI functionality
+
+
 ## Front-end version log and development
 v1.0
 - [X] display fetched json
@@ -130,3 +134,6 @@ v3.3
 v3.4
 - [X] Block rendering provides clickable summaries for any search that yields 1 or more hits. Updated to work with pepCheck
 - [X] various bug fixes and minor tweaks
+
+v4
+- [X] Added NewsAPI support, relevant articles will be displayed when you find a pep
