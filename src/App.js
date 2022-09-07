@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import printVals from './printVals';
 import getData from './Scheduler';
 import fetchNews from './fetchNews';
-import printNews from './printNews';
+
 
 function App() {
   const inputRef = useRef(null)
@@ -109,7 +109,7 @@ function App() {
   function renderNews() {
     const n = []
     for (var i = 0; i < news.length; i++) {
-      n.push(<div>Article: <a href={news[i].url}>{news[i].title}</a><br></br></div>)
+      n.push(<div>Article: <a href={news[i].url}>{news[i].title}</a></div>)
     }
     return n
   }
