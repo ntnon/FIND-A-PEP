@@ -17,16 +17,24 @@ function App() {
   useEffect(() => {
 
     if (input != '') {
-      console.log(input)
-      fetchNews(input)
-        .then(d => {
-          const b = []
-          d.articles.map(i => {
-            b.push({ "title": i.title, "url": i.url })
-          })
-          setNews(b)
+      try {
+        console.log(input)
+        fetchNews(input)
+          .then(d => {
+            const b = []
+            d.articles.map(i => {
+              b.push({ "title": i.title, "url": i.url })
+            })
+            setNews(b)
 
-        })
+          })
+          .catch(err => {
+            setNews(null)
+          })
+      }
+      catch {
+
+      }
       setBlocks('')
       setError(null)
       setIsLoading(true)
