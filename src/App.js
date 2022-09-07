@@ -15,6 +15,7 @@ function App() {
       setBlocks('')
       setError(null)
       setIsLoading(true)
+      fetchNews(input)
       getData(input)
         .then(f => {
           setData(f)
@@ -37,6 +38,7 @@ function App() {
     setBlocks(renderBlocks)
     setIsLoading(false)
   }, [data])
+
 
   const renderBlocks = () => {
     let r = data.filter(i => i["type"] !== "enheter")
@@ -69,6 +71,13 @@ function App() {
         {
           search.type !== "person" &&
           <details className="suggestions">
+            <summary >Click to see information</summary>
+            {printVals(search.data)}
+          </details>
+        }
+        {
+          search.pep &&
+          <details className="articles">
             <summary >Click to see information</summary>
             {printVals(search.data)}
           </details>
@@ -125,7 +134,6 @@ function App() {
         {!data.length > 0 && <h1 className="information">Results displayed here</h1>}
         {isLoading ? <p className="loader"></p> : ""}
         {blocks}
-
       </div>
     </div >
   )

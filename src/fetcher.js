@@ -1,4 +1,3 @@
-import findNames from "./findNames"
 import findSuggestions from "./findSuggestions";
 import pepCheck from "./pepCheck";
 
