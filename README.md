@@ -7,7 +7,7 @@ https://github.com/stacc/stacc-code-challenge-public
 # Booting the project
 clone the project and launch from installation folder using 'npm install' then 'npm run start'
 
-~~or use the link: https://anton-lr.github.io/kyc/~~ news API disables browser-called fetch requests, therefore this project has been taken offline, until further notice
+~~or use the link: https://anton-lr.github.io/kyc/~~ news API disables browser-called fetch requests, therefore this project has been taken offline, until further notice, but can still be utilized by installing on your own computer
 
 
 # How to use
