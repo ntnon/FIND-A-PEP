@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import printVals from './printVals';
 import getData from './Scheduler';
-import fetchNews from './fetchNews';
+
 
 
 function App() {
@@ -19,13 +19,12 @@ function App() {
     if (input != '') {
       try {
         console.log(input)
-        fetchNews(input)
           .then(d => {
             const b = []
             d.articles.map(i => {
               b.push({ "title": i.title, "url": i.url })
             })
-            setNews(b)
+    
 
           })
           .catch(err => {
@@ -38,7 +37,6 @@ function App() {
       setBlocks('')
       setError(null)
       setIsLoading(true)
-      fetchNews(input)
       getData(input)
         .then(f => {
           setData(f)
@@ -102,24 +100,9 @@ function App() {
             {printVals(search.data)}
           </details>
         }
-        {
-          search.pep &&
-          <details className="articles">
-            <summary >Click to see relevant articles</summary>
-            {renderNews(news)}
-          </details>
-        }
       </div>
     ))
     return blocks
-  }
-
-  function renderNews() {
-    const n = []
-    for (var i = 0; i < news.length; i++) {
-      n.push(<div>Article: <a href={news[i].url}>{news[i].title}</a></div>)
-    }
-    return n
   }
 
   function renderSuggestions(a, msg) {
@@ -163,8 +146,6 @@ function App() {
       </div>
       <div className="rawdata">
         {error && <div className="error">{error.message}</div>}
-        {news && printVals(news)}
-        {data.length > 0 ? printVals(data) : <h1 className="information">Data from search displayed here</h1>}
       </div>
       <div className="results">
         {!data.length > 0 && <h1 className="information">Results displayed here</h1>}
