@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kyc/static/css/main.5759ea8a.css",
+    "main.js": "/kyc/static/js/main.957e1049.js",
+    "index.html": "/kyc/index.html",
+    "main.5759ea8a.css.map": "/kyc/static/css/main.5759ea8a.css.map",
+    "main.957e1049.js.map": "/kyc/static/js/main.957e1049.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5759ea8a.css",
+    "static/js/main.957e1049.js"
+  ]
+}
