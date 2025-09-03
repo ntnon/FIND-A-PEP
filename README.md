@@ -7,8 +7,7 @@ https://github.com/stacc/stacc-code-challenge-public
 # Booting the project
 clone the project and launch from installation folder using 'npm install' then 'npm run start'
 
-~~or use the link: https://anton-lr.github.io/kyc/~~ news API disables browser-called fetch requests, therefore this project has been taken offline, until further notice, but can still be utilized by installing on your own computer
-
+Add your api key to .env to also retrieve relevant articles for your identified PEP.
 
 # How to use
 zoom until there is no blue empty space and
