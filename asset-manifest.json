@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/kyc-challenge-submission/static/css/main.ac8253a0.css",
-    "main.js": "/kyc-challenge-submission/static/js/main.52249e6d.js",
-    "index.html": "/kyc-challenge-submission/index.html",
-    "main.ac8253a0.css.map": "/kyc-challenge-submission/static/css/main.ac8253a0.css.map",
-    "main.52249e6d.js.map": "/kyc-challenge-submission/static/js/main.52249e6d.js.map"
+    "main.css": "/FIND-A-PEP/static/css/main.ac8253a0.css",
+    "main.js": "/FIND-A-PEP/static/js/main.52249e6d.js",
+    "index.html": "/FIND-A-PEP/index.html",
+    "main.ac8253a0.css.map": "/FIND-A-PEP/static/css/main.ac8253a0.css.map",
+    "main.52249e6d.js.map": "/FIND-A-PEP/static/js/main.52249e6d.js.map"
   },
   "entrypoints": [
     "static/css/main.ac8253a0.css",
